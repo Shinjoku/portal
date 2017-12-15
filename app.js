@@ -1,11 +1,14 @@
-var express = require('express');
-var app = express();
+var app = require('./config/server');
 
-app.get('/', function(req, res) {
-  res.send('<html><body>Portal de noticias</body></html>');
-});
+var rotaNoticias = require('./app/routes/noticias');
+rotaNoticias(app);
 
+var rotaHome = require('./app/routes/home');
+rotaHome(app);
+
+var rotaForm = require('./app/routes/formulario_inclusao_noticia');
+rotaForm(app);
 
 app.listen(3000, function(req, res){
-  console.log('Server rodando com Express');
+  console.log('Server rodando');
 });

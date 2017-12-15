@@ -1,7 +1,8 @@
 {
   "name": "testenode",
   "version": "1.0.0",
-  "description": "",
+  "description": "News Portal",
+  "repository": "github.com/shinjoku/portal",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
